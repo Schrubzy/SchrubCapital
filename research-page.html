@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Archive - Evergreen Capital</title>
+    <meta name="description" content="Deep dive investment research and analysis covering various sectors and investment opportunities.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1><a href="index.html" style="color: var(--forest-primary);">Evergreen Capital</a></h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="research.html" class="nav-link active">Research</a></li>
+                <li><a href="pitches.html" class="nav-link">Pitches</a></li>
+                <li><a href="notes.html" class="nav-link">Notes</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Investment Research</h1>
+                <p>Comprehensive fundamental analysis and deep-dive research on investment opportunities across various sectors.</p>
+            </div>
+        </section>
+
+        <section class="research-filters">
+            <div class="container">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Research</button>
+                    <button class="filter-tab" data-filter="technology">Technology</button>
+                    <button class="filter-tab" data-filter="healthcare">Healthcare</button>
+                    <button class="filter-tab" data-filter="consumer">Consumer</button>
+                    <button class="filter-tab" data-filter="financials">Financials</button>
+                    <button class="filter-tab" data-filter="industrials">Industrials</button>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Search research..." class="search-input" id="researchSearch">
+                </div>
+            </div>
+        </section>
+
+        <section class="research-archive">
+            <div class="container">
+                <div class="research-grid" id="researchGrid">
+                    
+                    <!-- Featured Research -->
+                    <article class="research-card featured" data-category="technology">
+                        <div class="research-date">December 2024</div>
+                        <h3>Microsoft Corporation (MSFT) - Deep Dive Analysis</h3>
+                        <p>Comprehensive analysis of Microsoft's cloud transformation journey, examining Azure's competitive position, Office 365 growth trajectory, and the company's AI integration strategy across its product ecosystem.</p>
+                        <div class="research-tags">
+                            <span class="tag">Cloud Computing</span>
+                            <span class="tag">AI/ML</span>
+                            <span class="tag">Enterprise Software</span>
+                        </div>
+                        <div class="research-meta">
+                            <span class="research-type">Deep Dive Analysis</span>
+                            <span class="research-rating bullish">BULLISH</span>
+                        </div>
+                        <div class="research-stats">
+                            <div class="stat">
+                                <span class="stat-label">Target Price</span>
+                                <span class="stat-value">$450</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Pages</span>
+                                <span class="stat-value">24</span>
+                            </div>
+                        </div>
+                        <a href="research/microsoft-analysis.html" class="research-link">Read Full Analysis</a>
+                    </article>
+
+                    <!-- Recent Research -->
+                    <article class="research-card" data-category="consumer">
+                        <div class="research-date">November 2024</div>
+                        <h3>Berkshire Hathaway (BRK.B) - Portfolio Analysis</h3>
+                        <p>Detailed examination of Berkshire's recent portfolio moves, cash deployment strategy, and Buffett's positioning in the current market environment with emphasis on the Apple stake reduction.</p>
+                        <div class="research-tags">
+                            <span class="tag">Conglomerate</span>
+                            <span class="tag">Value Investing</span>
+                        </div>
+                        <div class="research-meta">
+                            <span class="research-type">Portfolio Analysis</span>
+                            <span class="research-rating neutral">HOLD</span>
+                        </div>
+                        <div class="research-stats">
+                            <div class="stat">
+                                <span class="stat-label">Target Price</span>
+                                <span class="stat-value">$480</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Pages</span>
+                                <span class="stat-value">18</span>
+                            </div>
+                        </div>
+                        <a href="research/berkshire-analysis.html" class="research-link">Read Analysis</a>
+                    </article>
+
+                    <article class="research-card" data-category="consumer">
+                        <div class="research-date">October 2024</div>
+                        <h3>Consumer Discretionary Sector Review Q4 2024</h3>
+                        <p>Quarterly analysis of consumer discretionary trends, examining changing consumer behavior, inventory levels, and margin pressures across key subsectors including retail and automotive.</p>
+                        <div class="research-tags">
+                            <span class="tag">Sector Analysis</span>
+                            <span class="tag">Consumer Trends</span>
+                        </div>
+                        <div class="research-meta">
+                            <span class="research-type">Sector Review</span>
+                            <span class="research-rating bearish">CAUTIOUS</span>
+                        </div>
+                        <div class="research-stats">
+                            <div class="stat">
+                                <span class="stat-label">Companies</span>
+                                <span class="stat-value">12</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Pages</span>
+                                <span class="stat-value">31</span>
+                            </div>
+                        </div>
+                        <a href="research/consumer-discretionary-review.html" class="research-link">Read Review</a>
+                    </article>
+
+                    <article class="research-card" data-category="healthcare">
+                        <div class="research-date">September 2024</div>
+                        <h3>Johnson & Johnson (JNJ) - Pharmaceutical Pipeline Analysis</h3>
+                        <p>In-depth analysis of J&J's pharmaceutical pipeline, focusing on key drug candidates, patent cliff management, and the company's strategic shift following the consumer health spinoff.</p>
+                        <div class="research-tags">
+                            <span class="tag">Pharmaceuticals</span>
+                            <span class="tag">Pipeline Analysis</span>
+                        </div>
+                        <div class="research-meta">
+                            <span class="research-type">Company Analysis</span>
+                            <span class="research-rating bullish">BULLISH</span>
+                        </div>
+                        <div class="research-stats">
+                            <div class="stat">
+                                <span class="stat-label">Target Price</span>
+                                <span class="stat-value">$185</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Pages</span>
+                                <span class="stat-value">22</span>
+                            </div>
+                        </div>
+                        <a href="research/jnj-analysis.html" class="research-link">Read Analysis</a>
+                    </article>
+
+                    <article class="research-card" data-category="technology">
+                        <div class="research-date">August 2024</div>
+                        <h3>NVIDIA (NVDA) - AI Infrastructure Play</h3>
+                        <p>Analysis of NVIDIA's dominant position in AI infrastructure, examining competitive moats, datacenter growth prospects, and valuation considerations amid the AI revolution.</p>
+                        <div class="research-tags">
+                            <span class="tag">Semiconductors</span>
+                            <span class="tag">Artificial Intelligence</span>
+                        </div>
+                        <div class="research-meta">
+                            <span class="research-type">Thematic Analysis</span>
+                            <span class="research-rating neutral">HOLD</span>
+                        </div>
+                        <div class="research-stats">
+                            <div class="stat">
+                                <span class="stat-label">Target Price</span>
+                                <span class="stat-value">$140</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Pages</span>
+                                <span class="stat-value">19</span>
+                            </div>
+                        </div>
+                        <a href="research/nvidia-analysis.html" class="research-link">Read Analysis</a>
+                    </article>
+
+                    <article class="research-card" data-category="financials">
+                        <div class="research-date">July 2024</div>
+                        <h3>JPMorgan Chase (JPM) - Banking Sector Leadership</h3>
+                        <p>Comprehensive analysis of JPMorgan's market-leading position, examining credit quality, interest rate sensitivity, and digital transformation initiatives.</p>
+                        <div class="research-tags">
+                            <span class="tag">Banking</span>
+                            <span class="tag">Financial Services</span>
+                        </div>
+                        <div class="research-meta">
+                            <span class="research-type">Company Analysis</span>
+                            <span class="research-rating bullish">BULLISH</span>
+                        </div>
+                        <div class="research-stats">
+                            <div class="stat">
+                                <span class="stat-label">Target Price</span>
+                                <span class="stat-value">$220</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Pages</span>
+                                <span class="stat-value">26</span>
+                            </div>
+                        </div>
+                        <a href="research/jpmorgan-analysis.html" class="research-link">Read Analysis</a>
+                    </article>
+
+                    <article class="research-card" data-category="industrials">
+                        <div class="research-date">June 2024</div>
+                        <h3>Caterpillar (CAT) - Infrastructure Cycle Analysis</h3>
+                        <p>Analysis of Caterpillar's positioning in the global infrastructure cycle, examining demand drivers, margin expansion opportunities, and exposure to emerging markets.</p>
+                        <div class="research-tags">
+                            <span class="tag">Heavy Machinery</span>
+                            <span class="tag">Infrastructure</span>
+                        </div>
+                        <div class="research-meta">
+                            <span class="research-type">Cyclical Analysis</span>
+                            <span class="research-rating neutral">HOLD</span>
+                        </div>
+                        <div class="research-stats">
+                            <div class="stat">
+                                <span class="stat-label">Target Price</span>
+                                <span class="stat-value">$385</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Pages</span>
+                                <span class="stat-value">20</span>
+                            </div>
+                        </div>
+                        <a href="research/caterpillar-analysis.html" class="research-link">Read Analysis</a>
+                    </article>
+
+                    <article class="research-card" data-category="healthcare">
+                        <div class="research-date">May 2024</div>
+                        <h3>UnitedHealth Group (UNH) - Healthcare Ecosystem Dominance</h3>
+                        <p>Deep dive into UnitedHealth's integrated healthcare model, examining the synergies between UnitedHealthcare and Optum, and the company's competitive advantages.</p>
+                        <div class="research-tags">
+                            <span class="tag">Health Insurance</span>
+                            <span class="tag">Healthcare Services</span>
+                        </div>
+                        <div class="research-meta">
+                            <span class="research-type">Business Model Analysis</span>
+                            <span class="research-rating bullish">BULLISH</span>
+                        </div>
+                        <div class="research-stats">
+                            <div class="stat">
+                                <span class="stat-label">Target Price</span>
+                                <span class="stat-value">$620</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Pages</span>
+                                <span class="stat-value">28</span>
+                            </div>
+                        </div>
+                        <a href="research/unitedhealth-analysis.html" class="research-link">Read Analysis</a>
+                    </article>
+
+                </div>
+                
+                <div class="load-more">
+                    <button class="btn-secondary" id="loadMoreBtn">Load More Research</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Methodology -->
+        <section class="methodology">
+            <div class="container">
+                <h2 class="section-title">Research Methodology</h2>
+                <div class="methodology-grid">
+                    <div class="methodology-item">
+                        <h3>Fundamental Analysis</h3>
+                        <p>Deep financial statement analysis, competitive positioning assessment, and business model evaluation form the foundation of every research piece.</p>
+                    </div>
+                    <div class="methodology-item">
+                        <h3>Valuation Framework</h3>
+                        <p>Multi-faceted valuation approach using DCF models, comparable company analysis, and sum-of-the-parts methodology where applicable.</p>
+                    </div>
+                    <div class="methodology-item">
+                        <h3>Risk Assessment</h3>
+                        <p>Comprehensive risk analysis covering industry dynamics, regulatory concerns, competitive threats, and macroeconomic sensitivities.</p>
+                    </div>
+                    <div class="methodology-item">
+                        <h3>Thesis Validation</h3>
+                        <p>Regular thesis updates and performance tracking with clear catalysts identification and timeline expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Evergreen Capital</h3>
+                    <p>Independent value investment research focused on long-term wealth creation.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Research</h4>
+                    <ul>
+                        <li><a href="research.html">Latest Analysis</a></li>
+                        <li><a href="pitches.html">Investment Pitches</a></li>
+                        <li><a href="notes.html">Market Notes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="about.html">Investment Philosophy</a></li>
+                        <li><a href="portfolio.html">Track Record</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Evergreen Capital. All rights reserved. Not investment advice.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="research-filter.js"></script>
+</body>
+</html>
