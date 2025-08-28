@@ -14,7 +14,7 @@
     <header class="header">
         <nav class="nav">
             <div class="nav-brand">
-                <h1><a href="index.html" style="color: var(--forest-primary);">Evergreen Capital</a></h1>
+                <h1><a href="index.html" style="color: var(--forest-primary);">Schrub Capital</a></h1>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
@@ -57,16 +57,6 @@
                         <span class="stat-label">Success Rate</span>
                     </div>
                 </div>
-                
-                <!-- Price Controls -->
-                <div class="price-controls" style="text-align: center; margin-top: 2rem; padding: 1rem; background: var(--cream-white); border-radius: 8px;">
-                    <button onclick="refreshAllPrices()" class="btn-secondary" style="margin-right: 1rem;">
-                        🔄 Refresh Prices
-                    </button>
-                    <span class="last-updated" id="last-price-update" style="font-size: 0.875rem; color: var(--stone-gray);">
-                        Prices loading...
-                    </span>
-                </div>
             </div>
         </section>
 
@@ -94,16 +84,15 @@
                         <div class="pitch-financials">
                             <div class="financial-metric">
                                 <span class="metric-label">Current Price</span>
-                                <span class="metric-value price-element" data-ticker="AAPL">$176.00</span>
-                                <div class="price-change"></div>
+                                <span class="metric-value">$176.00</span>
                             </div>
                             <div class="financial-metric">
                                 <span class="metric-label">Target Price</span>
-                                <span class="metric-value" data-target-price="220">$220.00</span>
+                                <span class="metric-value">$220.00</span>
                             </div>
                             <div class="financial-metric">
                                 <span class="metric-label">Upside</span>
-                                <span class="metric-value upside" id="upside-AAPL">+25.0%</span>
+                                <span class="metric-value upside">+25.0%</span>
                             </div>
                         </div>
                         
@@ -150,16 +139,15 @@
                         <div class="pitch-financials">
                             <div class="financial-metric">
                                 <span class="metric-label">Current Price</span>
-                                <span class="metric-value price-element" data-ticker="JNJ">$157.00</span>
-                                <div class="price-change"></div>
+                                <span class="metric-value">$157.00</span>
                             </div>
                             <div class="financial-metric">
                                 <span class="metric-label">Target Price</span>
-                                <span class="metric-value" data-target-price="185">$185.00</span>
+                                <span class="metric-value">$185.00</span>
                             </div>
                             <div class="financial-metric">
                                 <span class="metric-label">Upside</span>
-                                <span class="metric-value upside" id="upside-JNJ">+17.8%</span>
+                                <span class="metric-value upside">+17.8%</span>
                             </div>
                         </div>
                         
@@ -355,7 +343,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Evergreen Capital</h3>
+                    <h3>Schrub Capital</h3>
                     <p>Independent value investment research focused on long-term wealth creation.</p>
                 </div>
                 <div class="footer-section">
@@ -376,13 +364,12 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Evergreen Capital. All rights reserved. Not investment advice.</p>
+                <p>&copy; 2024 Schrub Capital. All rights reserved. Not investment advice.</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
     <script src="pitches.js"></script>
-    <script src="stock-prices.js"></script>
 </body>
 </html>
