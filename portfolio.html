@@ -60,26 +60,6 @@
                         <span class="stat-period">Current Portfolio</span>
                     </div>
                 </div>
-                
-                <!-- Price Controls -->
-                <div class="price-controls" style="text-align: center; margin-top: 2rem; padding: 1rem; background: var(--cream-white); border-radius: 8px;">
-                    <button onclick="refreshAllPrices()" class="btn-secondary" style="margin-right: 1rem;">
-                        🔄 Refresh Stock Prices
-                    </button>
-                    <span class="last-updated" id="last-price-update" style="font-size: 0.875rem; color: var(--stone-gray);">
-                        Prices loading...
-                    </span>
-                </div>
-                
-                <!-- Price Controls -->
-                <div class="price-controls" style="text-align: center; margin-top: 2rem; padding: 1rem; background: var(--cream-white); border-radius: 8px;">
-                    <button onclick="refreshAllPrices()" class="btn-secondary" style="margin-right: 1rem;">
-                        Refresh Stock Prices
-                    </button>
-                    <span class="last-updated" id="last-price-update" style="font-size: 0.875rem; color: var(--stone-gray);">
-                        Prices loading...
-                    </span>
-                </div>
             </div>
         </section>
 
@@ -156,6 +136,15 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
+                
+                <div class="price-controls">
+                    <button onclick="refreshAllPrices()" class="btn-secondary">
+                        Refresh Stock Prices
+                    </button>
+                    <span class="last-updated" id="last-price-update">
+                        Prices loading...
+                    </span>
                 </div>
             </div>
         </section>
@@ -258,19 +247,18 @@
     <script src="script.js"></script>
     <script src="stock-prices.js"></script>
     <script>
-        // Auto-calculate returns for active positions
         document.addEventListener('DOMContentLoaded', function() {
+            // Auto-calculate returns for active positions
             function updateReturns() {
                 // Update Apple (AAPL) return
                 const aaplPrice = document.querySelector('.price-element[data-ticker="AAPL"]');
                 const aaplReturn = document.getElementById('return-AAPL');
                 if (aaplPrice && aaplReturn) {
-                    const currentPrice = parseFloat(aaplPrice.textContent.replace('
-</html>, ''));
+                    const currentPrice = parseFloat(aaplPrice.textContent.replace('$', ''));
                     const entryPrice = 176.00;
                     if (!isNaN(currentPrice)) {
                         const returnPct = ((currentPrice - entryPrice) / entryPrice) * 100;
-                        aaplReturn.textContent = `${returnPct >= 0 ? '+' : ''}${returnPct.toFixed(1)}%`;
+                        aaplReturn.textContent = \`\${returnPct >= 0 ? '+' : ''}\${returnPct.toFixed(1)}%\`;
                         aaplReturn.className = returnPct >= 0 ? 'return-positive' : 'return-negative';
                     }
                 }
@@ -279,12 +267,11 @@
                 const jnjPrice = document.querySelector('.price-element[data-ticker="JNJ"]');
                 const jnjReturn = document.getElementById('return-JNJ');
                 if (jnjPrice && jnjReturn) {
-                    const currentPrice = parseFloat(jnjPrice.textContent.replace('
-</html>, ''));
+                    const currentPrice = parseFloat(jnjPrice.textContent.replace('$', ''));
                     const entryPrice = 157.00;
                     if (!isNaN(currentPrice)) {
                         const returnPct = ((currentPrice - entryPrice) / entryPrice) * 100;
-                        jnjReturn.textContent = `${returnPct >= 0 ? '+' : ''}${returnPct.toFixed(1)}%`;
+                        jnjReturn.textContent = \`\${returnPct >= 0 ? '+' : ''}\${returnPct.toFixed(1)}%\`;
                         jnjReturn.className = returnPct >= 0 ? 'return-positive' : 'return-negative';
                     }
                 }
@@ -293,12 +280,11 @@
                 const vPrice = document.querySelector('.price-element[data-ticker="V"]');
                 const vReturn = document.getElementById('return-V');
                 if (vPrice && vReturn) {
-                    const currentPrice = parseFloat(vPrice.textContent.replace('
-</html>, ''));
+                    const currentPrice = parseFloat(vPrice.textContent.replace('$', ''));
                     const entryPrice = 285.00;
                     if (!isNaN(currentPrice)) {
                         const returnPct = ((currentPrice - entryPrice) / entryPrice) * 100;
-                        vReturn.textContent = `${returnPct >= 0 ? '+' : ''}${returnPct.toFixed(1)}%`;
+                        vReturn.textContent = \`\${returnPct >= 0 ? '+' : ''}\${returnPct.toFixed(1)}%\`;
                         vReturn.className = returnPct >= 0 ? 'return-positive' : 'return-negative';
                     }
                 }
@@ -313,6 +299,28 @@
             // Initial calculation after prices load
             setTimeout(updateReturns, 3000);
         });
+
+        // Add CSS for price controls styling
+        const style = document.createElement('style');
+        style.textContent = \`
+            .price-controls {
+                text-align: center;
+                margin-top: 2rem;
+                padding: 1rem;
+                background: var(--cream-white);
+                border-radius: 8px;
+            }
+            
+            .price-controls button {
+                margin-right: 1rem;
+            }
+            
+            .last-updated {
+                font-size: 0.875rem;
+                color: var(--stone-gray);
+            }
+        \`;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
