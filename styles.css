@@ -143,6 +143,39 @@ main {
     text-align: center;
 }
 
+.performance-highlight {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.performance-metric {
+    text-align: center;
+}
+
+.performance-metric .metric-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #4ade80;
+    font-family: 'Crimson Text', serif;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.performance-metric .metric-label {
+    display: block;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
