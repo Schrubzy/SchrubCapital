@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investment Pitches - Evergreen Capital</title>
+    <title>Investment Pitches - Schrub Capital</title>
     <meta name="description" content="Detailed investment pitches with specific buy recommendations, target prices, and comprehensive thesis development.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,6 +57,16 @@
                         <span class="stat-label">Success Rate</span>
                     </div>
                 </div>
+                
+                <!-- Price Controls -->
+                <div class="price-controls" style="text-align: center; margin-top: 2rem; padding: 1rem; background: var(--cream-white); border-radius: 8px;">
+                    <button onclick="refreshAllPrices()" class="btn-secondary" style="margin-right: 1rem;">
+                        🔄 Refresh Prices
+                    </button>
+                    <span class="last-updated" id="last-price-update" style="font-size: 0.875rem; color: var(--stone-gray);">
+                        Prices loading...
+                    </span>
+                </div>
             </div>
         </section>
 
@@ -84,15 +94,16 @@
                         <div class="pitch-financials">
                             <div class="financial-metric">
                                 <span class="metric-label">Current Price</span>
-                                <span class="metric-value">$176.00</span>
+                                <span class="metric-value price-element" data-ticker="AAPL">$176.00</span>
+                                <div class="price-change"></div>
                             </div>
                             <div class="financial-metric">
                                 <span class="metric-label">Target Price</span>
-                                <span class="metric-value">$220.00</span>
+                                <span class="metric-value" data-target-price="220">$220.00</span>
                             </div>
                             <div class="financial-metric">
                                 <span class="metric-label">Upside</span>
-                                <span class="metric-value upside">+25.0%</span>
+                                <span class="metric-value upside" id="upside-AAPL">+25.0%</span>
                             </div>
                         </div>
                         
@@ -139,15 +150,16 @@
                         <div class="pitch-financials">
                             <div class="financial-metric">
                                 <span class="metric-label">Current Price</span>
-                                <span class="metric-value">$157.00</span>
+                                <span class="metric-value price-element" data-ticker="JNJ">$157.00</span>
+                                <div class="price-change"></div>
                             </div>
                             <div class="financial-metric">
                                 <span class="metric-label">Target Price</span>
-                                <span class="metric-value">$185.00</span>
+                                <span class="metric-value" data-target-price="185">$185.00</span>
                             </div>
                             <div class="financial-metric">
                                 <span class="metric-label">Upside</span>
-                                <span class="metric-value upside">+17.8%</span>
+                                <span class="metric-value upside" id="upside-JNJ">+17.8%</span>
                             </div>
                         </div>
                         
@@ -371,5 +383,6 @@
 
     <script src="script.js"></script>
     <script src="pitches.js"></script>
+    <script src="stock-prices.js"></script>
 </body>
 </html>
